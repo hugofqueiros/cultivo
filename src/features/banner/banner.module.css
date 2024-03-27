@@ -1,0 +1,85 @@
+.banner {
+  max-width: 1250px;
+  min-width: 300px;
+  box-shadow: 0px 3px 8px 0px #00000014;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.bannerheader {
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 1.5rem 1.5rem;
+  min-width: 300px;
+  line-height: 1.3;
+}
+
+.bannerheader p {
+  padding-top: 0.5rem;
+  font-size: 1rem;
+  font-weight: 400
+}
+
+.bannerheader h1 {
+  padding-top: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+
+}
+
+.bannerbody {
+  background-color: #003E49;
+  padding: 1.5rem 0 1.5rem 1.5rem;
+  color: #fff;
+
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: left;
+}
+
+.bannerbody p {
+  padding-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.bannerbody ul {
+  list-style-type: none;
+  padding-left: 0.5rem;
+}
+
+.bannerbody li {
+  display: flex;
+  align-items: flex-start;
+}
+
+.bannerbody li::before {
+  content: "\2022"; /* Unicode character for bullet (•) */
+  font-size: 0.5rem;
+  margin-right: 10px;
+}
+
+.bannerbutton {
+  background-color: #003E49;
+  padding: 1.5rem 1.5rem;
+}
+
+/* Mobile using the same breakpoint determined in page.module.css */
+/* it's advisable to set breakpoints as min-width, as a mobile first approach but for the sake of consistency decided to keep same approach in the project */
+@media (max-width: 700px) {
+  .banner {
+    flex-direction: column;
+  }
+
+  .bannerheader {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 200px;
+  }
+
+  .bannerbody {
+    padding: 1.5rem 1.5rem 0 1.5rem;
+  }
+}
